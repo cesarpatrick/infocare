@@ -1,0 +1,7 @@
+{ 
+	"AppType" : "PUBLIC",
+	"ConsumerKey" : "TJJDUI5MELO94RI7TDHC4NUH1MJDPP",
+	"ConsumerSecret" : "Y8OAWGISDM2X5E8MTRTHULPCSDAMWC",
+	"CallbackBaseUrl" : "https://localhost:8443/infocare",
+	"CallbackPath" : "/callBackToken"
+}

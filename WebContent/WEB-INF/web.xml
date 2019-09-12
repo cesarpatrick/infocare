@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>Infocare</display-name>
+
+	<servlet>
+        <servlet-name>xeroServlet</servlet-name>
+        <servlet-class>biz.infocare.XeroServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>callBackServlet</servlet-name>
+        <servlet-class>biz.infocare.CallBackServlet</servlet-class>
+    </servlet>
+    
+    
+    <servlet-mapping>
+        <servlet-name>xeroServlet</servlet-name>
+        <url-pattern>/getToken</url-pattern>
+    </servlet-mapping>
+    
+     <servlet-mapping>
+        <servlet-name>callBackServlet</servlet-name>
+        <url-pattern>/callBackToken</url-pattern>
+    </servlet-mapping>
+    
+    <security-constraint>
+    
+	    <web-resource-collection>
+	        <web-resource-name>Servlet4Push</web-resource-name>
+	        <url-pattern>/*</url-pattern>
+	        <http-method>GET</http-method>
+	    </web-resource-collection>
+	
+	    <user-data-constraint>
+	        <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+	    </user-data-constraint>
+	
+	</security-constraint>
+    
+
+	<welcome-file-list>  
+	   <welcome-file>index.jsp</welcome-file> 
+  	</welcome-file-list>  
+</web-app>
