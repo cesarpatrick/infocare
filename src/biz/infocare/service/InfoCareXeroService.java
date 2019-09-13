@@ -24,7 +24,6 @@ public class InfoCareXeroService extends AccountingApi{
 	String where = null;
 	boolean summarizeErrors = false;
 	
-	
 	public InfoCareXeroService(Config config) {
 		super(config);
 	}
